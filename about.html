@@ -1,0 +1,89 @@
+<!-- Include Header -->
+<div id="header-placeholder"></div>
+
+<script>
+fetch('includes/header.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+  });
+</script>
+
+
+<!-- About Hero Section -->
+<section class="hero text-center" style="background: url('assets/images/aboutmissclean.png') no-repeat center center; background-size: cover; height: 300px; display:flex; align-items:center; justify-content:center; color:white;">
+  <div style="background-color: rgba(0,0,0,0.4); padding:40px; border-radius:10px;">
+    <h1>About MissClean</h1>
+    <p>Professional, reliable, and committed to excellence in cleaning services.</p>
+  </div>
+</section>
+
+<!-- Company Story Section -->
+<section class="company-story py-4 text-center">
+  <div class="container">
+    <h2>Our Story</h2>
+    <p>
+      MissClean was founded with a clear mission: to provide professional, reliable cleaning services that make every home and business shine. Our team brings years of experience, meticulous attention to detail, and a genuine passion for excellence to every cleaning job.
+    </p>
+    <p>
+      We pride ourselves on using eco-friendly practices and high-quality cleaning products safe for your family, pets, and the environment. From one-time deep cleans to regular residential maintenance or commercial cleaning for offices and event spaces, our services are tailored to each client’s unique needs.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- Get in Touch Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <div class="get-in-touch-box" style="background-color: #f0f0f0; border: 2px solid #2c3e50; padding: 30px; border-radius: 10px; display: inline-block; transition: transform 0.3s;">
+      <h2 style="color: #2c3e50; font-family: Arial, sans-serif; font-size: 1.5rem; margin-bottom: 15px;">
+        Get in Touch
+      </h2>
+      <p style="color: #2c3e50; font-family: Arial, sans-serif; font-size: 1rem; margin-bottom: 5px;">
+        Phone: <a href="tel:0468524209" style="color: #2c3e50; text-decoration: none;">0468 524 209</a>
+      </p>
+      <p style="color: #2c3e50; font-family: Arial, sans-serif; font-size: 1rem; margin-bottom: 0;">
+        Email: <a href="mailto:nathphrmungthxng@gmail.com" style="color: #2c3e50; text-decoration: none;">nathphrmungthxng@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const touchBox = document.querySelector('.get-in-touch-box');
+  touchBox.addEventListener('mouseover', () => {
+    touchBox.style.transform = 'scale(1.05)';
+  });
+  touchBox.addEventListener('mouseout', () => {
+    touchBox.style.transform = 'scale(1)';
+  });
+</script>
+
+
+<!-- Include Footer -->
+<div id="footer-placeholder"></div>
+
+<script>
+fetch('includes/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
+</script>
+
+
+<!-- JS to Load Header and Footer + Hover Animations -->
+<script>
+  fetch('includes/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+    });
+
+  fetch('includes/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    });
+</script>
