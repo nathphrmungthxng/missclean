@@ -1,0 +1,150 @@
+/* Navbar */
+.navbar {
+  background-color: #f9f9f9;
+}
+.navbar-brand img { height: 50px; }
+.nav-link {
+  color: #2c3e50;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+.nav-link:hover { color: #27ae60; }
+.nav-link.active { text-decoration: underline; }
+
+/* Navbar Buttons */
+.navbar .d-flex.ms-auto {
+  display: flex; flex-wrap: nowrap; gap: 10px;
+}
+.btn-quote {
+  border-radius: 25px;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: transparent;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s;
+  text-decoration: none;
+}
+.btn-quote i { margin-right: 5px; }
+.btn-quote:hover { transform: scale(1.1); text-decoration: none; }
+
+/* Hero Section */
+.about-hero {
+  background: url('assets/images/aboutmissclean.png') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.about-hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* About Content */
+.about-content {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.about-content p,
+.about-content ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Company Story */
+.company-story {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Mission & Values Tiles */
+.mission-tile {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.mission-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.mission-tile i {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.mission-tile h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mission-tile p {
+  color: #555;
+}
+/* Services Tiles */
+.service-tile {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.service-tile img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* Grey Faded Box under Services */
+.services-info {
+  background-color: rgba(128,128,128,0.1);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+footer p {
+  color: #2c3e50;  /* same as header/nav text */
+  font-size: 0.9rem;
+}
