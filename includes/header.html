@@ -84,6 +84,20 @@
       transform: scale(1.1);
       text-decoration: none;
     }
+
+  .get-in-touch-box {
+    transition: transform 0.3s ease;
+  }
+  .circle-tile,
+  .service-tile {
+    transition: transform 0.3s ease;
+  }
+  .circle-tile:hover,
+  .service-tile:hover,
+  .get-in-touch-box:hover {
+    transform: scale(1.05);
+  }
+
   </style>
 </head>
 <body>
@@ -94,22 +108,22 @@
   <div class="container">
     <!-- Logo + Business Name -->
     <a class="navbar-brand d-flex flex-column align-items-center" href="/index.html" style="text-decoration:none;">
-      
-      <!-- Arch Text above logo -->
-      <svg width="150" height="40" viewBox="0 0 150 40" style="margin-bottom:-10px;">
-        <defs>
-          <path id="archPath" d="M 25 30 Q 75 5 125 30" />
-        </defs>
-        <text fill="black" font-size="16" font-weight="bold" style="font-family:sans-serif;">
-          <textPath href="#archPath" startOffset="50%" text-anchor="middle">
-            MissClean
-          </textPath>
-        </text>
-      </svg>
+  <!-- Arch Text above logo -->
+  <svg width="150" height="40" viewBox="0 0 150 40" style="margin-bottom:-10px;">
+    <defs>
+      <path id="archPath" d="M 25 30 Q 75 5 125 30" />
+    </defs>
+    <text fill="black" font-size="16" font-weight="bold" style="font-family:sans-serif;">
+      <textPath href="#archPath" startOffset="50%" text-anchor="middle">
+        MissClean
+      </textPath>
+    </text>
+  </svg>
 
-      <!-- Logo below -->
-      <img src="/assets/images/logo.png" alt="MissClean Logo" style="height:50px; margin-top:-5px;">
-    </a>
+  <!-- Logo below -->
+  <img src="/assets/images/logo.png" alt="MissClean Logo" style="height:50px; margin-top:0;">
+</a>
+
 
     <!-- Mobile Toggler -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -121,7 +135,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/index.html">About Us</a></li>
       </ul>
     </div>
 
