@@ -1,14 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MissClean | Domestic & Commercial Cleaning Services</title>
+  <meta name="description" content="MissClean provides reliable domestic and commercial cleaning services in Australia. Professional cleaners, eco-friendly products, flexible scheduling.">
+  <meta name="author" content="MissClean">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
 <!-- Include Header -->
 <div id="header-placeholder"></div>
-
-<script>
-fetch('includes/header.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('header-placeholder').innerHTML = data;
-  });
-</script>
-
 
 <!-- Hero Section -->
 <section class="hero text-center" style="background: url('assets/images/DCCS-banner.PNG') no-repeat center center; background-size: cover; height: 350px; display:flex; align-items:center; justify-content:center; color:white;">
@@ -23,29 +27,28 @@ fetch('includes/header.html')
   <div class="container">
     <div class="row g-4 justify-content-center text-center">
       <div class="col-6 col-md-3">
-        <div class="circle-tile p-2 position-relative" style="transition: transform 0.3s;">
+        <div class="circle-tile p-2 position-relative">
           <img src="assets/images/proclean.png" class="img-fluid rounded-circle mb-2" alt="Professional Cleaners" style="width:70%; margin: 0 auto; display:block;">
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="circle-tile p-2 position-relative" style="transition: transform 0.3s;">
+        <div class="circle-tile p-2 position-relative">
           <img src="assets/images/eco.png" class="img-fluid rounded-circle mb-2" alt="Eco-Friendly Cleaning" style="width:70%; margin: 0 auto; display:block;">
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="circle-tile p-2 position-relative" style="transition: transform 0.3s;">
+        <div class="circle-tile p-2 position-relative">
           <img src="assets/images/guarantee.png" class="img-fluid rounded-circle mb-2" alt="100% Satisfaction Guaranteed" style="width:70%; margin: 0 auto; display:block;">
         </div>
       </div>
       <div class="col-6 col-md-3">
-        <div class="circle-tile p-2 position-relative" style="transition: transform 0.3s;">
+        <div class="circle-tile p-2 position-relative">
           <img src="assets/images/schedule.png" class="img-fluid rounded-circle mb-2" alt="Flexible Scheduling" style="width:70%; margin: 0 auto; display:block;">
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Highlight Text Section -->
 <section class="highlight-text py-5" style="background-color: #f9f9f9; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0;">
@@ -57,28 +60,14 @@ fetch('includes/header.html')
   </div>
 </section>
 
-<style>
-  /* Highlight section styling */
-  .highlight-text h2 {
-    font-weight: 600;
-    color: #2c3e50;
-  }
-  .highlight-text p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-</style>
-
-
-
 <!-- Services Section -->
 <section class="services py-5">
   <div class="container">
     <div class="row g-4 justify-content-center text-center">
 
+      <!-- Repeatable tiles -->
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/residential.png" class="img-fluid rounded" alt="Residential Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Residential Cleaning</h5>
@@ -88,7 +77,7 @@ fetch('includes/header.html')
       </div>
 
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/commercial.png" class="img-fluid rounded" alt="Commercial Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Commercial Cleaning</h5>
@@ -98,7 +87,7 @@ fetch('includes/header.html')
       </div>
 
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/spring.png" class="img-fluid rounded" alt="Spring Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Spring Cleaning</h5>
@@ -108,7 +97,7 @@ fetch('includes/header.html')
       </div>
 
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/deepclean.png" class="img-fluid rounded" alt="Deep Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Deep Cleaning</h5>
@@ -118,7 +107,7 @@ fetch('includes/header.html')
       </div>
 
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/moveout.png" class="img-fluid rounded" alt="Move In / Move Out Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Move In / Move Out Cleaning</h5>
@@ -128,7 +117,7 @@ fetch('includes/header.html')
       </div>
 
       <div class="col-md-4">
-        <div class="service-tile position-relative" style="transition: transform 0.3s;">
+        <div class="service-tile position-relative">
           <img src="assets/images/airbnb.png" class="img-fluid rounded" alt="Airbnb Cleaning" style="object-fit: cover; width: 100%; height: 250px;">
           <div class="service-overlay text-white p-2 position-absolute bottom-0 w-100" style="background-color: rgba(0,0,0,0.4);">
             <h5>Airbnb Cleaning</h5>
@@ -158,32 +147,32 @@ fetch('includes/header.html')
   </div>
 </section>
 
-<script>
-  const touchBox = document.querySelector('.get-in-touch-box');
-  touchBox.addEventListener('mouseover', () => {
-    touchBox.style.transform = 'scale(1.05)';
-  });
-  touchBox.addEventListener('mouseout', () => {
-    touchBox.style.transform = 'scale(1)';
-  });
-</script>
-
-
-
-
 <!-- Include Footer -->
 <div id="footer-placeholder"></div>
 
-<script>
-fetch('includes/footer.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-  });
-</script>
+<!-- Hover + Header/Footer Loader + Mobile Hero Fix -->
+<style>
+  /* Highlight section styling */
+  .highlight-text h2 {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  .highlight-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  /* Responsive hero text */
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+</style>
 
-
-<!-- JS to Load Header and Footer + Hover Animations -->
 <script>
   fetch('includes/header.html')
     .then(response => response.text())
@@ -197,15 +186,27 @@ fetch('includes/footer.html')
       document.getElementById('footer-placeholder').innerHTML = data;
     });
 
-  // Circle tile hover animation
-  document.querySelectorAll('.circle-tile').forEach(tile => {
-    tile.addEventListener('mouseover', () => tile.style.transform = 'scale(1.05)');
-    tile.addEventListener('mouseout', () => tile.style.transform = 'scale(1)');
-  });
 
-  // Service tile hover zoom animation
-  document.querySelectorAll('.service-tile').forEach(tile => {
-    tile.addEventListener('mouseover', () => tile.style.transform = 'scale(1.05)');
-    tile.addEventListener('mouseout', () => tile.style.transform = 'scale(1)');
+  const touchBox = document.querySelector('.get-in-touch-box');
+  touchBox.addEventListener('mouseover', () => {
+    touchBox.style.transform = 'scale(1.05)';
+  });
+  touchBox.addEventListener('mouseout', () => {
+    touchBox.style.transform = 'scale(1)';
   });
 </script>
+<style>
+  /* Match hover speed to Get in Touch box (0.3s) */
+  .circle-tile,
+  .service-tile {
+    transition: transform 0.3s ease !important;
+    will-change: transform;
+  }
+  .circle-tile:hover,
+  .service-tile:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+</body>
+</html>
