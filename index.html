@@ -15,62 +15,46 @@
   <!-- Include Header -->
   <!-- Header -->
 <div id="header-placeholder"></div>
+<!-- Header placeholder -->
+<div id="header-placeholder"></div>
 <script>
-fetch('includes/header.html')
+fetch('../includes/header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
 
-    // Activate nav link
+    // Highlight active nav link
     const path = window.location.pathname.replace(/\/$/, "");
     document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
       let href = link.getAttribute("href").replace(/\/$/, "");
-      if (path === href || (path === "" && href === "/")) {
+      if (path === href || path === "/about") {
         link.classList.add("active");
       }
     });
 
-    // Re-initialize Bootstrap JS components if needed
-    const collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-    const collapseList = collapseElementList.map(function (collapseEl) {
-      return new bootstrap.Collapse(collapseEl, {toggle: false})
+    // Initialize Bootstrap collapse for mobile menu
+    const collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
+    collapseElementList.map(function(collapseEl) {
+      return new bootstrap.Collapse(collapseEl, {toggle: false});
     });
   });
-  </script>
-<script>
-  fetch('includes/header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
 
-      // highlight active nav link
-      const path = window.location.pathname.replace(/\/$/, "");
-      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
-        let href = link.getAttribute("href").replace(/\/$/, "");
-        if (path === href || (path === "" && href === "/")) {
-          link.classList.add("active");
-        }
-      });
-    });
+// Footer fetch
+fetch('../includes/footer.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
 
-  fetch('includes/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    });
-
-  // hover effect
+// Hover effect for Get in Touch
+document.addEventListener('DOMContentLoaded', function() {
   const touchBox = document.querySelector('.get-in-touch-box');
   if (touchBox) {
-    touchBox.addEventListener('mouseover', () => {
-      touchBox.style.transform = 'scale(1.05)';
-    });
-    touchBox.addEventListener('mouseout', () => {
-      touchBox.style.transform = 'scale(1)';
-    });
+    touchBox.addEventListener('mouseover', () => { touchBox.style.transform = 'scale(1.05)'; });
+    touchBox.addEventListener('mouseout', () => { touchBox.style.transform = 'scale(1)'; });
   }
+});
 </script>
-
 
 
 <!-- Hero Section -->
