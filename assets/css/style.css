@@ -155,3 +155,24 @@ footer p {
   color: #2c3e50;  /* same as header/nav text */
   font-size: 0.9rem;
 }
+/* Responsive adjustments for navbar buttons on mobile */
+@media (max-width: 576px) {
+  .btn-quote {
+    padding: 0.4rem 0.8rem; /* slightly smaller padding */
+    font-size: 0.9rem;       /* smaller font size */
+    display: block;          /* stack buttons */
+    width: 100%;             /* full width for easier tapping */
+    text-align: center;
+    margin-bottom: 5px;      /* space between buttons */
+  }
+
+  .d-flex.ms-auto {
+    flex-direction: column;  /* stack buttons vertically */
+    align-items: stretch;    /* buttons fill width */
+    gap: 5px;                /* vertical spacing */
+  }
+
+  .btn-quote i {
+    margin-right: 5px;       /* keep icon spacing */
+  }
+}
