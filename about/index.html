@@ -1,15 +1,25 @@
 <!-- about/index.html -->
 
 <!-- Include Header -->
+<!-- Header -->
 <div id="header-placeholder"></div>
-
 <script>
-  fetch('../includes/header.html')
+  fetch('/includes/header.html')
     .then(res => res.text())
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
+
+      // Run active link highlight AFTER header loads
+      const path = window.location.pathname.replace(/\/$/, ""); 
+      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+        let href = link.getAttribute("href").replace(/\/$/, "");
+        if (path === href || (path === "" && href === "/")) {
+          link.classList.add("active");
+        }
+      });
     });
 </script>
+
 
 <!-- About Hero Section -->
 <section class="hero text-center" style="background: url('../assets/images/aboutmissclean.png') no-repeat center center; background-size: cover; height: 300px; display:flex; align-items:center; justify-content:center; color:white;">
