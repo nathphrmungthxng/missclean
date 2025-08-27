@@ -14,7 +14,7 @@
 <!-- Header placeholder -->
 <div id="header-placeholder"></div>
 <script>
-fetch('includes/header.html')
+fetch('../includes/header.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('header-placeholder').innerHTML = data;
@@ -23,7 +23,7 @@ fetch('includes/header.html')
     const path = window.location.pathname.replace(/\/$/, "");
     document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
       let href = link.getAttribute("href").replace(/\/$/, "");
-      if (path === href || (path === "" && href === "/")) {
+      if (path === href || path === "/about") {
         link.classList.add("active");
       }
     });
@@ -36,7 +36,7 @@ fetch('includes/header.html')
   });
 
 // Footer fetch
-fetch('includes/footer.html')
+fetch('../includes/footer.html')
   .then(res => res.text())
   .then(data => {
     document.getElementById('footer-placeholder').innerHTML = data;
