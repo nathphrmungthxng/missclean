@@ -11,8 +11,28 @@
 </head>
 <body>
 
-<!-- Include Header -->
+<body>
+
+  <!-- Include Header -->
+  <!-- Header -->
 <div id="header-placeholder"></div>
+<script>
+  fetch('/includes/header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+
+      // Run active link highlight AFTER header loads
+      const path = window.location.pathname.replace(/\/$/, ""); 
+      document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+        let href = link.getAttribute("href").replace(/\/$/, "");
+        if (path === href || (path === "" && href === "/")) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
 
 <!-- Hero Section -->
 <section class="hero text-center" style="background: url('assets/images/DCCS-banner.PNG') no-repeat center center; background-size: cover; height: 350px; display:flex; align-items:center; justify-content:center; color:white;">
@@ -147,8 +167,16 @@
   </div>
 </section>
 
-<!-- Include Footer -->
-<div id="footer-placeholder"></div>
+  <!-- Include Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('includes/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+</body>
+
 
 <!-- Hover + Header/Footer Loader + Mobile Hero Fix -->
 <style>
