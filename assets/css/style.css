@@ -9,7 +9,14 @@
   transition: color 0.3s;
 }
 .nav-link:hover { color: #27ae60; }
-.nav-link.active { text-decoration: underline; }
+/* style.css */
+.nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  color: #27ae60 !important; /* or your brand green */
+}
+
 
 /* Navbar Buttons */
 .navbar .d-flex.ms-auto {
