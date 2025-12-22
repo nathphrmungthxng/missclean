@@ -380,21 +380,21 @@ footer p {
 /* Circular Buttons for Mobile */
 @media (max-width: 576px) { /* Target screens 576px and smaller */
   .btn-quote {
-    width: 153px; /* Equal width and height for a circular shape */
-    height: 25px;
-    border-radius: 50%; /* Make the button circular */
-    display: inline-flex; /* Center content inside the button */
-    align-items: left;
-    justify-content: center;
-    padding: 0; /* Remove extra padding */
-    font-size: 1.0rem; /* Adjust font size for icons only */
-    border: 2px solid #27ae60; /* Add a green border for visibility */
+    width: auto; /* Automatically adjust width to fit content */
+    height: auto; /* Auto height based on content */
+    border-radius: 25px; /* Rounded corners (not a circle for elliptical buttons) */
+    display: inline-flex; /* Flexbox for content alignment */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    padding: 0 10px; /* Reduce horizontal padding */
+    font-size: 1rem; /* Adjust text size slightly */
+    border: 2px solid #27ae60; /* Green border */
     background-color: #27ae60; /* Green background */
-    color: #fff; /* White icon/text */
+    color: #fff; /* White text */
   }
 
   .btn-quote i {
-    margin-right: 0; /* Remove spacing between the icon and text */
+    margin-right: 5px; /* Small space between the icon and text */
   }
 }
 
