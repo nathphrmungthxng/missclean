@@ -1,27 +1,45 @@
-/* Navbar */
+/* General Navbar Styles */
 .navbar {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Light gray background */
 }
-.navbar-brand img { height: 50px; }
+.navbar-brand img {
+  height: 50px;
+}
 .nav-link {
-  color: #2c3e50;
+  color: #2c3e50;  /* Default text color */
   font-weight: normal;
-  transition: color 0.3s;
-}
-.nav-link:hover { color: #27ae60; }
-/* style.css */
-.nav-link.active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 2px;
-  color: #27ae60 !important; /* or your brand green */
+  transition: all 0.3s ease;  /* Smooth transitions for hover effects */
 }
 
+/* General Hover Effect (for all nav-links) */
+.navbar .nav-link:hover {
+  color: #ffffff; /* White text */
+  background-color: #27ae60; /* Green background */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Active Link Styling */
+.nav-link.active {
+  text-decoration: none; /* Remove underline for active links */
+  color: #27ae60 !important; /* Keep the green color for active link */
+}
+
+/* Exclude "Home" and "About Us" from the General Hover Effect */
+.navbar #menu-home.nav-link:hover,
+.navbar #menu-about.nav-link:hover {
+  color: #2c3e50 !important; /* Default text color (dark gray) */
+  background-color: transparent !important; /* Transparent background */
+  text-decoration: none !important;  /* No underline */
+  border: none !important; /* No border */
+}
 
 /* Navbar Buttons */
 .navbar .d-flex.ms-auto {
-  display: flex; flex-wrap: nowrap; gap: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
+
 .btn-quote {
   border-radius: 25px;
   border: 2px solid black;
@@ -31,11 +49,20 @@
   color: black;
   display: inline-flex;
   align-items: center;
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
-.btn-quote i { margin-right: 5px; }
-.btn-quote:hover { transform: scale(1.1); text-decoration: none; }
+
+.btn-quote:hover {
+  color: #ffffff; /* White text */
+  background-color: #27ae60; /* Green background */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  text-decoration: none;
+}
+
+.btn-quote i {
+  margin-right: 5px;
+}
 
 /* Hero Section */
 .about-hero {
@@ -92,7 +119,7 @@
   text-align: center;
 }
 
-/* Mission & Values Tiles */
+/* Mission and Values Tiles */
 .mission-tile {
   background-color: #fff;
   border-radius: 15px;
@@ -100,11 +127,11 @@
   text-align: center;
   border: 1px solid #e0e0e0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
   min-height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -126,13 +153,14 @@
 .mission-tile p {
   color: #555;
 }
+
 /* Services Tiles */
 .service-tile {
   background-color: #fff;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 .service-tile:hover {
@@ -145,34 +173,14 @@
   object-fit: contain;
 }
 
-/* Grey Faded Box under Services */
+/* Grey Faded Box Under Services */
 .services-info {
   background-color: rgba(128,128,128,0.1);
   border-radius: 10px;
   font-size: 1rem;
 }
+
 footer p {
-  color: #2c3e50;  /* same as header/nav text */
+  color: #2c3e50;  /* Same color as navbar links */
   font-size: 0.9rem;
 }
-/* Mobile tweaks for buttons */
-@media (max-width: 576px) {
-  .d-flex.ms-auto {
-    flex-direction: column;       /* stack buttons vertically */
-    align-items: center;           /* center horizontally */
-    gap: 10px;                     /* spacing between buttons */
-    width: 100%;                   /* optional: fill container width */
-  }
-
-  .btn-quote {
-    width: 80%;                    /* buttons fill most of screen */
-    padding: 0.6rem 1.2rem;        /* slightly bigger touch area */
-    font-size: 1rem;               /* easier to read */
-    justify-content: center;        /* center text and icon */
-  }
-
-  .btn-quote i {
-    margin-right: 8px;             /* slightly more space between icon and text */
-  }
-}
-
