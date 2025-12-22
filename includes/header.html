@@ -54,12 +54,14 @@
       display: inline-block; /* required for transform scale */
     }
     .nav-link:hover {
-      color: #27ae60; 
-      transform: scale(1.05); /* subtle zoom */
+	color: #27ae60; /* Green text */
+	border-bottom: none; /* Optional underline effect */
+	text-decoration: none;
+	}
     }
     .nav-link.active {
-	text-decoration: underline;
-	text-underline-offset: 6px; /* moves underline down for nicer look */
+	text-decoration: none;
+	text-underline-offset: none; /* moves underline down for nicer look */
 	text-decoration-thickness: 2px; /* makes it bolder */
 	color: #27ae60 !important; /* highlight color */
 	}
@@ -85,9 +87,11 @@
       margin-right: 5px;
     }
     .btn-quote:hover {
-      transform: scale(1.1);
-      text-decoration: none;
-    }
+	color: #27ae60; /* Green text */
+	background-color: transparent; /* No background fill */
+	border-color: #27ae60; /* Green border */
+	transform: scale(1.05); /* Optional zoom effect */
+	}
 
   .get-in-touch-box {
     transition: transform 0.3s ease;
@@ -136,11 +140,11 @@
 
     <!-- Centered Nav Links -->
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>
-      </ul>
-    </div>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link active" id="menu-home" href="/">Home</a></li>
+    <li class="nav-item"><a class="nav-link" id="menu-about" href="/about/">About Us</a></li>
+  </ul>
+</div>
 
     <!-- Right Side Buttons -->
     <div class="d-flex ms-auto">
