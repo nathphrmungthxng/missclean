@@ -407,6 +407,27 @@ footer p {
     transform: scale(1.05); /* Optional hover zoom effect */
   }
 }
+/* Fix for Mobile Menu Overlap */
+.navbar-collapse {
+  position: static !important; /* Ensure it does not overlap with page content */
+}
+
+.navbar-collapse.collapsing {
+  height: auto; /* Ensure height is computed for smooth transition effects */
+  overflow: hidden;
+}
+
+.navbar-collapse.show {
+  height: auto !important; /* Fully expand the navbar on toggle */
+  overflow: visible; /* Ensure all dropdown items are visible without clipping */
+}
+
+/* Ensure body content starts below the navbar */
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 70px; /* Adjust to match navbar fixed height */
+}
 
 /* Desktop and Default Styles */
 .btn-quote {
