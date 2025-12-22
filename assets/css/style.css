@@ -447,9 +447,10 @@ body {
 /* Desktop Hover Effect */
 @media (min-width: 577px) { /* Target screens larger than 576px */
   .btn-quote:hover {
-    color: #fff; /* White text */
-    background-color: #27ae60; /* Green background on hover */
-    border-color: #27ae60; /* Green border on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    color: #27ae60; /* Green text */
+    border-color: #27ae60; /* Green border */
+    background-color: transparent; /* Keep background transparent */
+    transform: scale(1.05); /* Slight zoom effect */
+    text-decoration: none; /* Ensure no underline */
   }
 }
