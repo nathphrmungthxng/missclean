@@ -380,14 +380,14 @@ footer p {
 /* Circular Buttons for Mobile */
 @media (max-width: 576px) { /* Target screens 576px and smaller */
   .btn-quote {
-    width: 160px; /* Equal width and height for a circular shape */
-    height: 30px;
+    width: 153px; /* Equal width and height for a circular shape */
+    height: 25px;
     border-radius: 50%; /* Make the button circular */
     display: inline-flex; /* Center content inside the button */
-    align-items: center;
+    align-items: left;
     justify-content: center;
     padding: 0; /* Remove extra padding */
-    font-size: 1.2rem; /* Adjust font size for icons only */
+    font-size: 1.0rem; /* Adjust font size for icons only */
     border: 2px solid #27ae60; /* Add a green border for visibility */
     background-color: #27ae60; /* Green background */
     color: #fff; /* White icon/text */
