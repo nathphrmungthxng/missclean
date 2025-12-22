@@ -1,14 +1,26 @@
 /* General Navbar Styles */
 .navbar {
-  background-color: #f9f9f9; /* Light gray background */
+  position: fixed; /* Fix the navbar to the top of the viewport */
+  top: 0; /* Position it at the top */
+  width: 100%; /* Make it span the full width of the page */
+  z-index: 1050; /* Ensure it stays above all other elements */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
+}
+body {
+  padding-top: 70px; /* Adjust this value to match the height of your navbar */
 }
 .navbar-brand img {
   height: 50px;
 }
 .nav-link {
-  color: #2c3e50;  /* Default text color */
+  color: #2c3e50; /* Default text color */
   font-weight: normal;
-  transition: all 0.3s ease;  /* Smooth transitions for hover effects */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+/* Arch Text Color on Hover */
+.navbar-brand:hover text {
+  fill: #27ae60; /* Green color */
 }
 
 /* General Hover Effect (for all nav-links) */
@@ -18,10 +30,13 @@
   text-decoration: none; /* Remove underline */
 }
 
-/* Active Link Styling */
+/* Active Link Styling (Green Underline for Current Page) */
 .nav-link.active {
-  text-decoration: none; /* Remove underline for active links */
-  color: #27ae60 !important; /* Keep the green color for active link */
+  text-decoration: underline; /* Adds underline */
+  text-decoration-color: #27ae60; /* Green underline color */
+  text-decoration-thickness: 2px; /* Make the underline bold */
+  text-underline-offset: 4px; /* Adjust positioning for better spacing */
+  color: #27ae60 !important; /* Green text for the active link */
 }
 
 /* Exclude "Home" and "About Us" from the General Hover Effect */
@@ -29,7 +44,7 @@
 .navbar #menu-about.nav-link:hover {
   color: #2c3e50 !important; /* Default text color (dark gray) */
   background-color: transparent !important; /* Transparent background */
-  text-decoration: none !important;  /* No underline */
+  text-decoration: none !important; /* No underline */
   border: none !important; /* No border */
 }
 
@@ -39,29 +54,77 @@
   flex-wrap: nowrap;
   gap: 10px;
 }
+.navbar-toggler {
+  border: 1px solid #27ae60; /* Green border */
+  transition: background-color 0.3s ease;
+}
 
+.navbar-toggler:focus, .navbar-toggler:hover {
+  background-color: #27ae60; /* Green background for mobile toggler */
+}
+
+/* Button Base Style (No Hover) */
 .btn-quote {
-  border-radius: 25px;
-  border: 2px solid black;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  background-color: transparent;
-  color: black;
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  border-radius: 50px; /* Rounded corners */
+  border: 2px solid black; /* Black border by default */
+  padding: 0.5rem 1.5rem; /* Padding for button */
+  font-weight: bold; /* Bold font */
+  background-color: transparent; /* Transparent background */
+  color: black; /* Black text by default */
+  display: inline-flex; /* Flex layout */
+  align-items: center; /* Center text vertically */
+  transition: all 0.3s ease; /* Smooth hover transition */
+  text-decoration: none; /* No underline */
 }
 
+/* Button Hover Effect */
 .btn-quote:hover {
-  color: #ffffff; /* White text */
-  background-color: #27ae60; /* Green background */
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  color: #27ae60; /* Green text color */
+  border-color: #27ae60; /* Green border */
+  background-color: transparent; /* Keep background transparent */
+  transform: scale(1.05); /* Optional zoom effect */
   text-decoration: none;
 }
 
+/* Icon Styling */
 .btn-quote i {
-  margin-right: 5px;
+  margin-right: 5px; /* Adds space between icon and text */
+}
+
+/* Hero Section for Index Page */
+.hero {
+  background: url('assets/images/DCCS-banner.PNG') no-repeat center center; /* Background image */
+  background-size: cover; /* Ensure the image covers the section */
+  height: 350px; /* Set the section height */
+  display: flex; /* Flexbox for vertical and horizontal alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  position: relative; /* Context for overlay */
+  color: white; /* Text color */
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent grey */
+  padding: 40px; /* Spacing inside the overlay */
+  border-radius: 10px; /* Rounded corners */
+  color: white; /* Text color */
+  max-width: 800px; /* Box width to centralize content */
+  text-align: center; /* Centered text */
+  margin: 0 auto; /* Center the overlay horizontally */
+}
+
+.hero-overlay h1 {
+  font-size: 2.5rem; /* Large heading size */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem; /* Font size for paragraph */
+  margin: 5px 0;
+  line-height: 1.6; /* Increase line spacing for readability */
+}
 }
 
 /* Hero Section */
@@ -154,23 +217,45 @@
   color: #555;
 }
 
-/* Services Tiles */
+/* Service Tiles */
 .service-tile {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  background-color: #ffffff; /* White box background */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Prevent overflow of content in the tile */
+  position: relative; /* Establish a positioning context for the overlay */
+  transition: transform 0.3s ease; /* Smooth hover effect for zoom */
 }
 
+/* Remove Shadow on Hover */
 .service-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: scale(1.05); /* Slight zoom of the entire tile */
+  box-shadow: none; /* Remove shadow during hover */
 }
 
+/* Fill the Service Tiles with Images */
 .service-tile img {
-  max-height: 150px;
-  object-fit: contain;
+  width: 100%; /* Full width */
+  height: 250px; /* Fixed height for consistent box sizes */
+  object-fit: cover; /* Ensures the image fills the box while cropping overflow */
+  border-radius: 10px; /* Rounded corners for the image */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Add Zoom Effect to Images on Hover */
+.service-tile:hover img {
+  transform: scale(1.1); /* Zoom in the image slightly */
+}
+
+/* Grey Overlay with Text */
+.service-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent grey overlay */
+  color: white; /* Text color */
+  padding: 20px; /* Inner spacing for text */
+  border-top-left-radius: 15px; /* Match tile's rounded corners */
+  border-top-right-radius: 15px;
+  position: absolute; /* Overlay placed on top of the image */
+  bottom: 0; /* Fixed to the bottom of the tile */
+  width: 100%; /* Match the width of the tile */
 }
 
 /* Grey Faded Box Under Services */
@@ -181,6 +266,114 @@
 }
 
 footer p {
-  color: #2c3e50;  /* Same color as navbar links */
+  color: #2c3e50; /* Same color as navbar links */
   font-size: 0.9rem;
+}
+
+/* Highlight Text Section */
+.highlight-text h2 {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.highlight-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Media Query for Hero Section on Small Devices */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Get in Touch Box */
+.get-in-touch-box {
+  background: url('/assets/images/intouch.png') no-repeat center center; /* Center the image */
+  background-size: cover; /* Ensure the image fills the box */
+  border: 2px solid #e0e0e0; /* Subtle border matching other boxes */
+  border-radius: 15px; /* Rounded corners to match other boxes */
+  padding: 30px; /* Adjusted inner spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+  max-width: 500px; /* Adjust box width */
+  margin: 0 auto; /* Centered horizontally */
+  text-align: center; /* Align text within the box */
+  color: #ffffff; /* White text for better contrast over the background */
+  font-family: Arial, sans-serif; /* Consistent typography */
+  position: relative; /* Establish a context for potential overlays */
+  overflow: hidden;
+}
+
+/* Links inside the Get in Touch Box */
+.get-in-touch-box a {
+  color: #ffffff; /* Pure white for better contrast */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effects */
+}
+
+.get-in-touch-box a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Text Contrast Overlay (optional) */
+.get-in-touch-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure it covers the image but not the text */
+}
+
+/* Ensure text appears above the overlay */
+.get-in-touch-box h1,
+.get-in-touch-box h2,
+.get-in-touch-box a {
+  position: relative;
+  z-index: 2; /* Place text above the overlay */
+}
+
+/* Heading Styling */
+.get-in-touch-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+.get-in-touch-box p {
+  font-size: 0.9rem;
+}
+/* Circle Tile Styling */
+.circle-tile {
+  padding: 10px; /* Inner spacing between the tile and other elements */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  border-radius: 50%; /* Ensure the container is circular */
+  overflow: hidden; /* Prevent content from overflowing outside the circle */
+}
+
+/* Zoom Effect on Hover */
+.circle-tile:hover {
+  transform: scale(1.1); /* Slightly enlarge the tile */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.0); /* No shadow on hover */
+}
+
+/* Images Inside Circle Tiles */
+.circle-tile img {
+  width: 70%; /* Control the image size */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure proper alignment */
+  border-radius: 50%; /* Ensure the image itself is circular */
+  transition: transform 0.3s ease; /* Smooth zoom along with the container */
+}
+
+/* Optional Hover Effect on Images */
+.circle-tile:hover img {
+  transform: scale(1.15); /* Give the image an additional zoom effect */
 }
