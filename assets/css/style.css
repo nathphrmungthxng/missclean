@@ -218,6 +218,16 @@ body {
   transform: scale(1.15); /* Zoom effect on hover */
 }
 
+@media (max-width: 576px) {
+  .circle-tile {
+    padding: 15px; /* Increase padding to resize the circle */
+  }
+
+  .circle-tile img {
+    width: 90%; /* Increase image size inside the circle */
+  }
+}
+
 /* Service Tiles */
 .service-tile {
   background-color: #ffffff; /* White background */
