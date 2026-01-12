@@ -6,7 +6,7 @@
   z-index: 1050; /* Stay above all elements */
   background-color: #f9f9f9; /* Light background */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 10px 15px; /* Internal spacing */
+  padding: 0px 15px; /* Internal spacing */
   overflow-x: hidden; /* Prevent unintentional horizontal scrolling */
 }
 
