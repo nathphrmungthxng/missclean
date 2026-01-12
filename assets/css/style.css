@@ -2,455 +2,198 @@
 .navbar {
   position: fixed; /* Fix the navbar to the top of the viewport */
   top: 0; /* Position it at the top */
-  width: 100%; /* Make it span the full width of the page */
-  z-index: 1050; /* Ensure it stays above all other elements */
-  background-color: #f9f9f9; /* Light background color */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow for depth */
+  width: 100%; /* Full width */
+  z-index: 1050; /* Stay above all elements */
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px 15px; /* Add internal spacing */
 }
+
 body {
-  padding-top: 70px; /* Adjust this value to match the height of your navbar */
+  padding-top: 70px; /* Adjust space under navbar to prevent overlap */
 }
+
 .navbar-brand img {
-  height: 50px;
-}
-.nav-link {
-  color: #2c3e50; /* Default text color */
-  font-weight: normal;
-  transition: all 0.3s ease; /* Smooth transitions for hover effects */
-}
-/* Arch Text Color on Hover */
-.navbar-brand:hover text {
-  fill: #27ae60; /* Green color */
+  height: 50px; /* Logo height */
 }
 
-/* General Hover Effect (for all nav-links) */
-.navbar .nav-link:hover {
-  color: #ffffff; /* White text */
-  background-color: #27ae60; /* Green background */
-  text-decoration: none; /* Remove underline */
-}
-
-/* Active Link Styling (Green Underline for Current Page) */
-.nav-link.active {
-  text-decoration: underline; /* Adds underline */
-  text-decoration-color: #27ae60; /* Green underline color */
-  text-decoration-thickness: 2px; /* Make the underline bold */
-  text-underline-offset: 4px; /* Adjust positioning for better spacing */
-  color: #27ae60 !important; /* Green text for the active link */
-}
-
-/* Exclude "Home" and "About Us" from the General Hover Effect */
-.navbar #menu-home.nav-link:hover,
-.navbar #menu-about.nav-link:hover {
-  color: #2c3e50 !important; /* Default text color (dark gray) */
-  background-color: transparent !important; /* Transparent background */
-  text-decoration: none !important; /* No underline */
-  border: none !important; /* No border */
-}
-
-/* Navbar Buttons */
-.navbar .d-flex.ms-auto {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
+/* Navbar Toggler */
 .navbar-toggler {
-  border: 1px solid #27ae60; /* Green border */
+  border: 1px solid #27ae60; /* Green border for indication */
+  padding: 5px 10px; /* Adjust alignment in small screens */
+  border-radius: 4px; /* Slightly rounded corners */
   transition: background-color 0.3s ease;
 }
 
-.navbar-toggler:focus, .navbar-toggler:hover {
-  background-color: #27ae60; /* Green background for mobile toggler */
+.navbar-toggler:focus, 
+.navbar-toggler:hover {
+  background-color: #27ae60; /* Green background on hover */
+  color: #fff; /* White icon */
 }
 
-/* Button Base Style (No Hover) */
-.btn-quote {
-  border-radius: 50px; /* Rounded corners */
-  border: 2px solid black; /* Black border by default */
-  padding: 0.5rem 1.5rem; /* Padding for button */
-  font-weight: bold; /* Bold font */
+/* Navbar Links */
+.navbar-nav .nav-link {
+  color: #2c3e50; /* Default text color */
+  font-size: 1rem; /* Responsive font size */
+  padding: 5px 15px; /* Adjust spacing */
+  text-align: center; /* Center-align for mobile */
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #27ae60; /* Green text on hover */
   background-color: transparent; /* Transparent background */
-  color: black; /* Black text by default */
-  display: inline-flex; /* Flex layout */
-  align-items: center; /* Center text vertically */
-  transition: all 0.3s ease; /* Smooth hover transition */
-  text-decoration: none; /* No underline */
-}
-
-/* Button Hover Effect */
-.btn-quote:hover {
-  color: #27ae60; /* Green text color */
-  border-color: #27ae60; /* Green border */
-  background-color: transparent; /* Keep background transparent */
-  transform: scale(1.05); /* Optional zoom effect */
   text-decoration: none;
 }
 
-/* Icon Styling */
-.btn-quote i {
-  margin-right: 5px; /* Adds space between icon and text */
+/* Active Link Styling */
+.navbar .nav-link.active {
+  text-decoration: underline; /* Highlight active link */
+  text-decoration-color: #27ae60; /* Green underline */
+  color: #27ae60; /* Green active state */
 }
 
-/* Hero Section for Index Page */
-.hero {
-  background: url('assets/images/DCCS-banner.PNG') no-repeat center center; /* Background image */
-  background-size: cover; /* Ensure the image covers the section */
-  height: 350px; /* Set the section height */
-  display: flex; /* Flexbox for vertical and horizontal alignment */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  text-align: center; /* Center text */
-  position: relative; /* Context for overlay */
-  color: white; /* Text color */
+/* Right-Side Buttons */
+.navbar .d-flex.ms-auto {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px; /* Maintain spacing between buttons */
 }
 
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent grey */
-  padding: 40px; /* Spacing inside the overlay */
-  border-radius: 10px; /* Rounded corners */
-  color: white; /* Text color */
-  max-width: 800px; /* Box width to centralize content */
-  text-align: center; /* Centered text */
-  margin: 0 auto; /* Center the overlay horizontally */
-}
-
-.hero-overlay h1 {
-  font-size: 2.5rem; /* Large heading size */
+/* Default Buttons */
+.btn-quote {
+  border: 2px solid black; /* Black border by default */
+  background-color: transparent; /* Transparent background */
+  color: black; /* Default text color */
+  border-radius: 50px; /* Rounded corners */
   font-weight: bold;
-  margin-bottom: 15px;
+  padding: 0.5rem 1.5rem; /* Default padding */
+  display: inline-flex; /* Keep text/icon aligned */
+  align-items: center; /* Align content vertically */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth hover effect */
 }
 
-.hero-overlay p {
-  font-size: 1.2rem; /* Font size for paragraph */
-  margin: 5px 0;
-  line-height: 1.6; /* Increase line spacing for readability */
+/* Button Hover */
+.btn-quote:hover {
+  color: #27ae60; /* Green text */
+  border-color: #27ae60; /* Green border */
+  background-color: transparent; /* Transparent background on hover */
+  transform: scale(1.05); /* Slight zoom */
 }
+
+/* Buttons and Links for Mobile */
+@media (max-width: 576px) {
+  .navbar-nav {
+    margin-bottom: 10px; /* Spacing between menu links */
+  }
+
+  .btn-quote {
+    width: auto; /* Adjust button width for smaller devices */
+    font-size: 0.9rem; /* Slightly smaller font */
+    padding: 0.3rem 1rem; /* Compact padding */
+    margin: 5px auto; /* Center buttons */
+    border-radius: 25px; /* Consistent round button styles */
+  }
 }
 
 /* Hero Section */
-.about-hero {
-  background: url('assets/images/aboutmissclean.png') no-repeat center center;
-  background-size: cover;
-  height: 300px;
-  display: flex;
+.hero {
+  background: url('assets/images/DCCS-banner.PNG') no-repeat center center; /* Background image */
+  background-size: cover; /* Ensure the image covers the section */
+  height: 350px; /* Fixed height */
+  display: flex; /* Center align */
   align-items: center;
   justify-content: center;
-  text-align: center;
-  position: relative;
-  color: white;
+  color: white; /* White text */
 }
 
-.about-hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 40px;
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  padding: 20px; /* Add spacing around the text */
   border-radius: 10px;
+  color: white; /* Text overlay color */
+  text-align: center; /* Centered alignment */
+  max-width: 800px; /* Max width for content */
 }
 
-.about-hero h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: normal;
+/* Circle Tile Styling */
+.circle-tile {
+  padding: 10px; /* Inner spacing between the tile content */
+  border-radius: 50%; /* Make the container circular */
+  overflow: hidden; /* Prevent content overflow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
-.about-hero p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.circle-tile:hover {
+  transform: scale(1.1); /* Enlarge slightly on hover */
 }
 
-/* About Content */
-.about-content {
-  background-color: #fff;
-  padding: 60px 20px;
-  text-align: left;
+/* Images Inside Circle Tiles */
+.circle-tile img {
+  width: 70%; /* Image width */
+  margin: 0 auto; /* Center the image */
+  display: block;
+  border-radius: 50%; /* Make the image circular */
+  transition: transform 0.3s ease; /* Smooth zoom along with tile */
 }
 
-.about-content h2 {
-  font-size: 1.8rem;
-  margin-top: 20px;
-  font-weight: normal;
-}
-
-.about-content p,
-.about-content ul {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Company Story */
-.company-story {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* Mission and Values Tiles */
-.mission-tile {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 30px 20px;
-  text-align: center;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.mission-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-.mission-tile i {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.mission-tile h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.mission-tile p {
-  color: #555;
+.circle-tile:hover img {
+  transform: scale(1.15); /* Add image zoom effect */
 }
 
 /* Service Tiles */
 .service-tile {
   background-color: #ffffff; /* White box background */
+  transition: transform 0.3s ease; /* Smooth hover */
   border-radius: 15px; /* Rounded corners */
-  overflow: hidden; /* Prevent overflow of content in the tile */
-  position: relative; /* Establish a positioning context for the overlay */
-  transition: transform 0.3s ease; /* Smooth hover effect for zoom */
+  overflow: hidden; /* Prevent content overflow */
+  position: relative; /* Position for overlays */
 }
 
-/* Remove Shadow on Hover */
 .service-tile:hover {
-  transform: scale(1.05); /* Slight zoom of the entire tile */
-  box-shadow: none; /* Remove shadow during hover */
+  transform: scale(1.05); /* Add hover zoom */
 }
 
-/* Fill the Service Tiles with Images */
 .service-tile img {
   width: 100%; /* Full width */
-  height: 250px; /* Fixed height for consistent box sizes */
-  object-fit: cover; /* Ensures the image fills the box while cropping overflow */
-  border-radius: 10px; /* Rounded corners for the image */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Crop overflow */
 }
 
-/* Add Zoom Effect to Images on Hover */
-.service-tile:hover img {
-  transform: scale(1.1); /* Zoom in the image slightly */
-}
-
-/* Grey Overlay with Text */
 .service-overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent grey overlay */
-  color: white; /* Text color */
-  padding: 20px; /* Inner spacing for text */
-  border-top-left-radius: 15px; /* Match tile's rounded corners */
-  border-top-right-radius: 15px;
-  position: absolute; /* Overlay placed on top of the image */
-  bottom: 0; /* Fixed to the bottom of the tile */
-  width: 100%; /* Match the width of the tile */
+  background-color: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px; /* Add inner spacing */
 }
 
-/* Grey Faded Box Under Services */
-.services-info {
-  background-color: rgba(128,128,128,0.1);
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
-footer p {
-  color: #2c3e50; /* Same color as navbar links */
-  font-size: 0.9rem;
-}
-
-/* Highlight Text Section */
+/* Highlight Section */
 .highlight-text h2 {
-  font-weight: 600;
+  font-weight: bold;
   color: #2c3e50;
+  text-align: center;
+  marginBottom: 15px;
 }
 
 .highlight-text p {
-  font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
+  font-size: 1.1rem;
 }
 
-/* Media Query for Hero Section on Small Devices */
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-}
-
-/* Get in Touch Box */
-.get-in-touch-box {
-  background: url('/assets/images/intouch.png') no-repeat center center; /* Center the image */
-  background-size: cover; /* Ensure the image fills the box */
-  border: 2px solid #e0e0e0; /* Subtle border matching other boxes */
-  border-radius: 15px; /* Rounded corners to match other boxes */
-  padding: 30px; /* Adjusted inner spacing */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
-  max-width: 500px; /* Adjust box width */
-  margin: 0 auto; /* Centered horizontally */
-  text-align: center; /* Align text within the box */
-  color: #ffffff; /* White text for better contrast over the background */
-  font-family: Arial, sans-serif; /* Consistent typography */
-  position: relative; /* Establish a context for potential overlays */
-  overflow: hidden;
-}
-
-/* Links inside the Get in Touch Box */
-.get-in-touch-box a {
-  color: #ffffff; /* Pure white for better contrast */
-  text-decoration: none; /* Remove underline by default */
-  transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover effects */
-}
-
-.get-in-touch-box a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
-
-/* Text Contrast Overlay (optional) */
-.get-in-touch-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
-  z-index: 1; /* Ensure it covers the image but not the text */
-}
-
-/* Ensure text appears above the overlay */
-.get-in-touch-box h1,
-.get-in-touch-box h2,
-.get-in-touch-box a {
-  position: relative;
-  z-index: 2; /* Place text above the overlay */
-}
-
-/* Heading Styling */
-.get-in-touch-box h2 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-
-/* Paragraph Styling */
-.get-in-touch-box p {
+/* Footer Styles */
+footer p {
+  color: #2c3e50; /* Footer text matches the navbar links */
   font-size: 0.9rem;
 }
-/* Circle Tile Styling */
-.circle-tile {
-  padding: 10px; /* Inner spacing between the tile and other elements */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  border-radius: 50%; /* Ensure the container is circular */
-  overflow: hidden; /* Prevent content from overflowing outside the circle */
-}
 
-/* Zoom Effect on Hover */
-.circle-tile:hover {
-  transform: scale(1.1); /* Slightly enlarge the tile */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.0); /* No shadow on hover */
-}
-
-/* Images Inside Circle Tiles */
-.circle-tile img {
-  width: 70%; /* Control the image size */
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Ensure proper alignment */
-  border-radius: 50%; /* Ensure the image itself is circular */
-  transition: transform 0.3s ease; /* Smooth zoom along with the container */
-}
-
-/* Optional Hover Effect on Images */
-.circle-tile:hover img {
-  transform: scale(1.15); /* Give the image an additional zoom effect */
-}
-/* Circular Buttons for Mobile */
-@media (max-width: 576px) { /* Target screens 576px and smaller */
-  .btn-quote {
-    width: auto; /* Automatically adjust width to fit content */
-    height: auto; /* Auto height based on content */
-    border-radius: 25px; /* Rounded corners (not a circle for elliptical buttons) */
-    display: inline-flex; /* Flexbox for content alignment */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    padding: 0 5px; /* Reduce horizontal padding */
-    font-size: 1rem; /* Adjust font size slightly */
-    border: 2px solid #27ae60; /* Green border */
-    background-color: transparent; /* Transparent background */
-    color: #27ae60; /* Green text */
-    text-decoration: none; /* Remove underline */
-    transition: all 0.3s ease; /* Smooth transition on hover */
-  }
-
-  .btn-quote i {
-    margin-right: 5px; /* Small space between the icon and text */
-  }
-
-  /* Hover Effect for Mobile */
-  .btn-quote:hover {
-    background-color: transparent; /* Keep background transparent */
-    border-color: #27ae60; /* Green border on hover */
-    color: #27ae60; /* Green text stays green */
-    transform: scale(1.05); /* Optional hover zoom effect */
-  }
-}
-/* Fix for Mobile Menu Overlap */
-.navbar-collapse {
-  position: static !important; /* Ensure it does not overlap with page content */
-}
-
-.navbar-collapse.collapsing {
-  height: auto; /* Ensure height is computed for smooth transition effects */
-  overflow: hidden;
-}
-
-.navbar-collapse.show {
-  height: auto !important; /* Fully expand the navbar on toggle */
-  overflow: visible; /* Ensure all dropdown items are visible without clipping */
-}
-
-/* Ensure body content starts below the navbar */
-body {
-  margin: 0;
-  padding: 0;
-  margin-top: 70px; /* Adjust to match navbar fixed height */
-}
-
-/* Desktop and Default Styles */
-.btn-quote {
-  border-radius: 25px; /* Rounded corners for default (desktop) */
-  border: 2px solid black; /* Black border */
-  padding: 0.5rem 1rem; /* Larger horizontal padding for buttons */
-  font-weight: bold; /* Bold text */
-  background-color: transparent; /* Transparent background */
-  color: black; /* Black text by default */
-  display: inline-flex; /* Flexbox for button content alignment */
-  align-items: center; /* Center items vertically */
-  transition: all 0.3s ease; /* Smooth transition on hover */
-  text-decoration: none; /* No underline */
-  font-size: 1rem; /* Default font size */
-}
-
-/* Desktop Hover Effect */
-@media (min-width: 577px) { /* Target screens larger than 576px */
-  .btn-quote:hover {
-    color: #27ae60; /* Green text */
-    border-color: #27ae60; /* Green border */
-    background-color: transparent; /* Keep background transparent */
-    transform: scale(1.05); /* Slight zoom effect */
-    text-decoration: none; /* Ensure no underline */
+/* Mobile-Specific Footer Adjustments */
+@media (max-width: 576px) {
+  .footer p {
+    text-align: center; /* Center footer text on mobile */
   }
 }
