@@ -185,8 +185,12 @@ body {
 
 /* Optional Media Query for Smaller Screens */
 @media (max-width: 576px) {
+  .email-address {
+    font-size: 0.9rem; /* Slightly reduce font size for extra-long strings */
+  }
+
   .get-in-touch-box {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 20px; /* Ensure enough space inside the box */
   }
 }
 
