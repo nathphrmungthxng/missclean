@@ -94,7 +94,7 @@ body {
 /* Mobile-Specific Styles */
 @media (max-width: 576px) {
   .navbar {
-    padding: 8px 10px; /* Adjusted padding for smaller screens */
+    padding: 0px 10px; /* Adjusted padding for smaller screens */
   }
 
   .navbar-brand img {
