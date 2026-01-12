@@ -104,7 +104,7 @@ body {
   .navbar-collapse {
     width: 100%; /* Ensure collapsible container spans full width */
     overflow-x: hidden; /* Prevent horizontal scrolling in menu */
-    padding: 10px 0; /* Add padding inside collapsible menu */
+    padding: 0px 0; /* Add padding inside collapsible menu */
   }
 
   .navbar-nav {
