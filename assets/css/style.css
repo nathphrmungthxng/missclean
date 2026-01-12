@@ -209,3 +209,23 @@ footer p {
     text-align: center; /* Center footer text */
   }
 }
+
+/* Prevent email address or long text from causing overflow */
+.email-address {
+  word-wrap: break-word; /* Break long words onto the next line */
+  overflow-wrap: break-word; /* Ensure wrapping works in all browsers */
+  white-space: normal; /* Allow text wrapping */
+  display: inline-block; /* Helps confine content to the container width */
+}
+
+/* Optional: Center-align links with some spacing */
+.get-in-touch-box a {
+  text-align: center;
+  display: inline-block;
+  padding: 2px 0; /* Adds minimal spacing */
+  text-decoration: none;
+}
+
+.get-in-touch-box a:hover {
+  text-decoration: underline; /* Optional underline on hover */
+}
