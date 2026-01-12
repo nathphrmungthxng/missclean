@@ -145,6 +145,51 @@ body {
   max-width: 800px; /* Max width for container */
 }
 
+/* Get in Touch Section */
+.get-in-touch-section {
+  background-color: #f9f9f9; /* Same light gray as "Domestic & Commercial Cleaning" */
+  border-top: 1px solid #e0e0e0; /* Match the border styling */
+  border-bottom: 1px solid #e0e0e0; /* Match the border styling */
+}
+
+.get-in-touch-box {
+  background-color: white; /* White box inside the section for contrast */
+  color: #333; /* Darker text for readability */
+  padding: 40px; /* Add padding to make it spacious */
+  border-radius: 10px; /* Rounded corners for a soft feel */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  max-width: 600px; /* Limit width to prevent overflow */
+  margin: 0 auto; /* Center the box */
+  text-align: center; /* Center-align everything inside */
+  box-sizing: border-box; /* Prevent padding/margins from affecting width */
+}
+
+/* Prevent email address or long text from causing overflow */
+.email-address {
+  word-wrap: break-word; /* Ensure long words break */
+  overflow-wrap: break-word; /* Support all browsers */
+  white-space: normal; /* Allow wrapping */
+  display: inline-block; /* Keep the address inline */
+}
+
+/* Links Styles */
+.get-in-touch-box a {
+  color: #27ae60; /* Green link color */
+  text-decoration: none; /* No underline */
+  font-weight: bold; /* Emphasize link text */
+}
+
+.get-in-touch-box a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Optional Media Query for Smaller Screens */
+@media (max-width: 576px) {
+  .get-in-touch-box {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+}
+
 /* Circle Tile Styling */
 .circle-tile {
   padding: 10px; /* Inner spacing */
@@ -208,24 +253,4 @@ footer p {
   footer p {
     text-align: center; /* Center footer text */
   }
-}
-
-/* Prevent email address or long text from causing overflow */
-.email-address {
-  word-wrap: break-word; /* Break long words onto the next line */
-  overflow-wrap: break-word; /* Ensure wrapping works in all browsers */
-  white-space: normal; /* Allow text wrapping */
-  display: inline-block; /* Helps confine content to the container width */
-}
-
-/* Optional: Center-align links with some spacing */
-.get-in-touch-box a {
-  text-align: center;
-  display: inline-block;
-  padding: 2px 0; /* Adds minimal spacing */
-  text-decoration: none;
-}
-
-.get-in-touch-box a:hover {
-  text-decoration: underline; /* Optional underline on hover */
 }
