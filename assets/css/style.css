@@ -73,6 +73,10 @@ body {
   text-decoration: none; /* Remove underline */
   transition: all 0.3s ease; /* Smooth hover effect */
 }
+/* Icon Styling for Buttons */
+.btn-quote i {
+  margin-right: 5px; /* Adds space between the icon and the text */
+}
 
 /* Button Hover */
 .btn-quote:hover {
